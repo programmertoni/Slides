@@ -1,0 +1,270 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        <title>reveal.js</title>
+
+        <link rel="stylesheet" href="css/reveal.css">
+        <link rel="stylesheet" href="css/theme/white.css">
+
+        <!-- Theme used for syntax highlighting of code -->
+        <link rel="stylesheet" href="lib/css/zenburn.css">
+
+        <!-- Printing and PDF exports -->
+        <script>
+            var link = document.createElement( 'link' );
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+            document.getElementsByTagName( 'head' )[0].appendChild( link );
+        </script>
+        <style>
+            .heroes {
+                border: none !important;
+                box-shadow: none !important;
+                width: 344px;
+                padding-top: 24px;
+            }
+            .highlight {
+                background-color: #E2893C;
+                color: #fff;
+                padding: 10px !important;
+                border-radius: 14px;
+            }
+            .padding-top {
+                padding-top: 21px !important;
+            }
+            .larger-font {
+                font-size: 1.5em !important;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="reveal">
+            <div class="slides">
+                <section>
+                    <img
+                        src="img/web_assembly.jpg"
+                        style="border: none; box-shadow: none;"
+                        alt="web-assembly-logo">
+                </section>
+                <section class="larger-font">What is WebAssembly?</section>
+                <section class="larger-font">What is <span class="highlight">Web</span>Assembly?</section>
+                <section>
+                    <section class="larger-font">Brief history of the web</section>
+                    <section>
+                        <div><span class="highlight">1822</span></div>
+                        <div class="padding-top">Charles Babbage</div>
+                        <img src="img/babbage.jpg" class="heroes" alt="computerscience-heros-image">
+                    </section>
+                    <section>
+                        <div><span class="highlight">1842</span></div>
+                        <div class="padding-top">Ada Lovelace</div>
+                        <img src="img/lovelace.jpg" class="heroes" alt="computerscience-heros-image">
+                    </section>
+                    <section>
+                        <div><span class="highlight">1946</span></div>
+                        <div class="padding-top">Alan Turing</div>
+                        <img src="img/turing.jpg" class="heroes" alt="computerscience-heros-image">
+                    </section>
+                    <section>
+                        <div><span class="highlight">1952</span></div>
+                        <div class="padding-top">Grace Hopper</div>
+                        <img src="img/hopper.jpg" class="heroes" alt="computerscience-heros-image">
+                    </section>
+                    <section>
+                        <div><span class="highlight">1989</span></div>
+                        <div class="padding-top">Tim Berners-Lee</div>
+                        <img src="img/lee.jpg" class="heroes" alt="computerscience-heros-image">
+                    </section>
+                    <section>
+                        <div><span class="highlight">1995</span></div>
+                        <div class="padding-top">Brendan Eich</div>
+                        <img src="img/eich.jpg" class="heroes" alt="computerscience-heros-image">
+                    </section>
+                    <section>
+                        <div><span class="highlight">2004</span></div>
+                        <div class="padding-top">David Heinemeier-Hansson</div>
+                        <img src="img/hansson.jpg" class="heroes" alt="computerscience-heros-image">
+                    </section>
+                    <section>
+                        <div><span class="highlight">2009</span></div>
+                        <div class="padding-top">Ryan Dahl</div>
+                        <img src="img/dahl.jpg" class="heroes" alt="computerscience-heros-image">
+                    </section>
+                    <section>
+                        <div><span class="highlight">Now</span></div>
+                        <h1 style="padding-top: 18px; margin-bottom: -10px">YOU</h1>
+                        <img
+                            src="img/zemanta.jpg"
+                            class="heroes"
+                            style="width: 700px"
+                            alt="computerscience-heros-image">
+                    </section>
+                </section>
+                <section class="larger-font">What is Web<span class="highlight">Assembly</span>?</section>
+                <section>
+                    <p>Machine Code</p>
+                    <pre style="text-align: center"><code data-trim data-noescape>
+                        00101010
+                    </code></pre>
+                </section>
+                <section>
+                    <p>Assembly</p>
+                    <pre><code data-trim data-noescape>
+                        mov ax, 7
+                        mov bx, 3
+                        add ax, bx
+                        push ax
+                    </code></pre>
+                </section>
+                <section>
+                    <p>Lower Level Languages</p>
+                    <pre><code data-trim data-noescape>
+                        void doSomethingWithInts(int a = 1, int b = 4)
+                        {
+                            // Do something with the ints here
+                        }
+
+                        int main()
+                        {
+                            doSomethingWithInts();      // a = 1,  b = 4
+                            doSomethingWithInts(20);    // a = 20, b = 4
+                            doSomethingWithInts(20, 5); // a = 20, b = 5
+                        }
+                    </code></pre>
+                </section>
+                <section>
+                    <p>Higher Level Languages</p>
+                    <pre><code data-trim data-noescape>
+                        def fib(n):
+                            if n == 0: return 0
+                            elif n == 1: return 1
+                            else: return fib(n-1)+fib(n-2)
+                    </code></pre>
+                </section>
+                <section>
+                    <p>Visual Languages</p>
+                    <img
+                        src="img/unreal.png"
+                        style="border: none; box-shadow: none;"
+                        alt="unreal">
+                </section>
+                <section class="larger-font">Higher level => less Efficient</section>
+                <section>
+                    <p>JavaScript</p>
+                    <pre><code data-trim data-noescape>
+                        function add(a, b) {
+                            return a + b;
+                        }
+                    </code></pre>
+                </section>
+                <section>
+                    <img
+                        src="img/js_plus_operator.png"
+                        style="border: none; box-shadow: none;"
+                        alt="js plus operator">
+                </section>
+                <section>
+                    <p>asm.js</p>
+                    <pre><code data-trim data-noescape>
+                        function f(x, y) {
+                            x = x|0;
+                            y = +y;
+
+                            log(x|0);
+                            log(y);
+                            x = (x+3)|0;
+                            return ((((x+1)|0)>>>0)/(x>>>0))|0;
+                        }
+                    </code></pre>
+                </section>
+                <section>
+                    <h3>wast</h3>
+                    <small>WebAssembly abstract syntax tree</small>
+                    <img
+                        src="img/wast.png"
+                        style="border: none; box-shadow: none;"
+                        alt="wast">
+                </section>
+                <section>
+                    <h3>wast</h3>
+                   <small>WebAssembly abstract syntax tree</small>
+                    <img
+                        src="img/wasm.png"
+                        style="border: none; box-shadow: none;"
+                        alt="wast">
+                </section>
+                <section>
+                    <p>WebAssembly is FAST</p>
+                    <h1>1.2</h1>
+                    <p>compared to native code</p>
+                </section>
+                <section>
+                    <p>WebAssembly is upto</p>
+                    <h1>30x</h1>
+                    <p>faster than JavaScript</p>
+                </section>
+                <section>
+                    <h1>Demo</h1>
+                </section>
+                <section>
+                    <p>Rust is great</p>
+                    <p style="font-size: 1.3em">but what about </p>
+                    <h2>higher level languages</h2>
+                </section>
+                <section>
+                    <p style="font-size: 2em">TurboScript</p>
+                </section>
+                <section>
+                    <p>TurboScript</p>
+                    <pre><code data-trim data-noescape>
+                        export class Vector3D {
+                            x:float32;
+                            y:float32;
+                            z:float32;
+
+                            constructor(x:float32, y:float32, z:float32){
+                                this.x = x;
+                                this.y = y;
+                                this.z = z;
+                            }
+                        }
+                    </code></pre>
+                </section>
+                <section>
+                    <p style="font-size: 2em">Try it out</p>
+                </section>
+                <section>
+                    <h1>Learn More</h1>
+                    <p>webassembly.org</p>
+                </section>
+                <section>
+                    <p style="font-size: 1.5em"><span style="color: #E0873C">Zemanta</span> is looking for great <strong style="color: #43547B">Software Engineers</strong></p>
+                </section>
+                <section>
+                    <p style="font-size: 2em">Thank you!</p>
+                </section>
+            </div>
+        </div>
+
+        <script src="lib/js/head.min.js"></script>
+        <script src="js/reveal.js"></script>
+
+        <script>
+            // More info about config & dependencies:
+            // - https://github.com/hakimel/reveal.js#configuration
+            // - https://github.com/hakimel/reveal.js#dependencies
+            Reveal.initialize({
+                dependencies: [
+                    { src: 'plugin/markdown/marked.js' },
+                    { src: 'plugin/markdown/markdown.js' },
+                    { src: 'plugin/notes/notes.js', async: true },
+                    { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+                ]
+            });
+        </script>
+    </body>
+</html>
