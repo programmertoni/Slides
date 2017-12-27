@@ -1,0 +1,12 @@
+{
+  "name": "add",
+  "version": "1.0.0",
+  "description": "demo app",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "rust-native-wasm-loader": "^0.1.5",
+    "wasm-loader": "^1.1.0",
+    "webpack": "^3.10.0"
+  }
+}
