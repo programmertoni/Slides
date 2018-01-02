@@ -43,8 +43,7 @@
     </head>
     <body>
         <div class="reveal">
-            <div class="slides">
-                <section>
+            <div class="slides">                <section>
                     <img
                         src="img/web_assembly.jpg"
                         style="border: none; box-shadow: none;"
@@ -140,7 +139,7 @@
                     <p>Higher Level Languages</p>
                     <pre><code data-trim data-noescape>
                         def fib(n):
-                            if n == 0 or n == 1: return n
+                            if n in [0, 1]: return n
                             else: return fib(n-1) + fib(n-2)
                     </code></pre>
                 </section>
@@ -170,7 +169,7 @@
                     <p>asm.js</p>
                     <pre><code data-trim data-noescape>
                         function f(x, y) {
-                            x = <mark>x|0</mark>;
+                            x = x|0;
                             y = +y;
 
                             log(x|0);
@@ -179,6 +178,12 @@
                             return ((((x+1)|0)>>>0)/(x>>>0))|0;
                         }
                     </code></pre>
+                </section>
+                <section>
+                    <img
+                        src="img/web_assembly.jpg"
+                        style="border: none; box-shadow: none;"
+                        alt="web-assembly-logo">
                 </section>
                 <section>
                     <h3>wast</h3>
@@ -234,11 +239,11 @@
                     </code></pre>
                 </section>
                 <section>
-                    <p style="font-size: 2em">Try it out</p>
-                </section>
-                <section>
                     <h1>Learn More</h1>
                     <p>webassembly.org</p>
+                </section>
+                <section>
+                    <p style="font-size: 2em">Try it out</p>
                 </section>
                 <section>
                     <p style="font-size: 1.5em"><span style="color: #E0873C">Zemanta</span> is looking for great <strong style="color: #43547B">Software Engineers</strong></p>
